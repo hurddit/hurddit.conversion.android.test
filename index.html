@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <title>--| hurdd.it |--</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+	body {
+		padding-top: 60px;
+		padding-bottom: 0px;
+	}
+	.background {
+		background: url(assets/img/pat_01.png);
+	}
+	.actions p { font-size: 90%; }
+	.feature { 
+		background: #E6E6E6; 
+		min-height: 270px !important;
+		margin: 0.5em auto;
+	}
+	.placeholder {
+		padding: 0.3em;
+	}
+	.placeholder img {
+		float: left;
+		margin: 0 8px 0 0;
+		max-width: 175px;
+		max-height: 175px;
+	}
+/*	.placeholder span {
+		margin: 0 0.9em;
+		display: block;
+	} */
+	.rounded {
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+	}
+	
+	.footer {
+		position: relative;
+		bottom: 0px;
+	}
+	.footer .base-nav li {
+		margin: 2.0em 0;
+		padding: 0.1em 0.5em;
+		list-style-type: none;
+		float: left;
+		display: inline;
+	}
+	#copyright {
+		padding: 0.6em 0;
+	}
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#home"><img src="assets/img/branding/logo.png" alt="hurdd.it"></a>
+          <div class="nav-collapse collapse" style="padding-top:6px;">
+            <ul class="nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#mystuff">History</a></li>
+                  <li><a href="#mystuff">Corporate Culture</a></li>
+                  <li><a href="#orderhistory">Investor Details</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#paymentinfo">Careers</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown" style="display:none;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#mystuff">My Stuff</a></li>
+                  <li><a href="#orderhistory">Order History</a></li>
+                  <li><a href="#paymentinfo">Payment Info</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form id="login" class="navbar-form pull-right">
+              <button id="sign_in" class="btn btn-mini">Sign in <i class="icon-user"></i></button>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit">
+        <div class="drop">
+            <h2>Designs Worth Sharing</h2>
+            <p><em>Ut nec pellentesque quam. Nullam id varius nulla. Maecenas lorem orci, feugiat eget elementum id, commodo eu augue. Aenean vitae eros tincidunt leo tincidunt bibendum. Etiam eget varius dui.</em></p>
+            <p style="float: right;"><button id="get_started" class="btn btn-primary btn-large">Get Started »</button></p>
+        </div>
+    </div>
+
+    <div class="container background">
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="actions span3">
+          <h2>design.it</h2>
+          <p>You design it, not us. We'll need a print-quality file in the end, but other than that just do your thing.</p>
+          <!--p><a class="btn" href="#">View details »</a></p -->
+        </div>
+        <div class="actions span3">
+          <h2>share.it</h2>
+          <p>Spread the word. Once costs are covered, your design goes to print and you're making cash money.</p>
+          <!--p><a class="btn" href="#">View details »</a></p -->
+       </div>
+        <div class="actions span3">
+          <h2>sell.it</h2>
+          <p>Sell your favourite design! All screen printers are not created equal, and ours are the best in the business. </p>
+          <!--p><a class="btn" href="#">View details »</a></p -->
+        </div>
+        <div class="actions span3">
+          <h2>ship.it</h2>
+          <p>Don't worry about packing peanuts or the Post Office. We do the heavy lifting so you don't have to.</p>
+          <!--p><a class="btn" href="#">View details »</a></p -->
+        </div>
+      </div>
+      <div class="row">
+      	<div class="span12 rounded border">
+        	<h3>featured designs</h3>
+            <div class="row">
+            	<div class="span4 feature rounded">
+                	<div class="placeholder">
+                    	<ul class="nav">
+                        	<li><img src="assets/img/products/33e3fd167401338ccd5cf0f110a6d2a8.jpg"></li>
+                            <li>
+                            	<span>
+                                	<h4>$20</h4>
+                                    <p>Aenean adipiscing mi accumsan quam ullamcorper non lobortis diam tempor.</p>
+                            	</span>
+                            </li>
+                        </ul>
+                        <p class="hidden-phone">
+                        	<span class="label">school</span>
+                            <span class="label">raise funds</span>
+                            <span class="label">fractals</span>
+                            <span class="label">t-shirt</span>
+                            <span class="label">joiner</span>
+                            <span class="label">hurdd.it</span>
+                            <span class="label">starving student</span>
+                            <span class="label">noobies</span>
+                        </p>
+                        <div class="nav-list">
+                        	<ul class="nav">
+                            	<li><a href="#"><img src="assets/img/icons/facebook-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/twitter-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/pintrest-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/tumblr-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/google_plus-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/email-16x16.png"></a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                        <button 
+                        	id="prev_33e3fd167401338ccd5cf0f110a6d2a8" 
+                            class="btn btn-mini" 
+                            title="preview"><i class="icon-eye-open"></i></button>
+                        <button 
+                        	id="cart_33e3fd167401338ccd5cf0f110a6d2a8" 
+                            class="btn btn-mini" 
+                            title="add to cart"><i class="icon-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            	<div class="span4 feature rounded">
+                	<div class="placeholder">
+                    	<ul class="nav">
+                        	<li><img src="assets/img/products/33bed8d4fcadf2a946f6d616846427ed.jpg"></li>
+                            <li>
+                            	<span>
+                                	<h4>$20</h4>
+                                    <p>Aenean adipiscing mi accumsan quam ullamcorper non lobortis diam tempor.</p>
+                            	</span>
+                            </li>
+                        </ul>
+                        <p class="hidden-phone">
+                        	<span class="label">school</span>
+                            <span class="label">raise funds</span>
+                            <span class="label">fractals</span>
+                            <span class="label">t-shirt</span>
+                            <span class="label">joiner</span>
+                            <span class="label">hurdd.it</span>
+                            <span class="label">starving student</span>
+                            <span class="label">noobies</span>
+                        </p>
+                        <div class="nav-list">
+                        	<ul class="nav">
+                            	<li><a href="#"><img src="assets/img/icons/facebook-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/twitter-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/pintrest-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/tumblr-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/google_plus-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/email-16x16.png"></a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                        <button 
+                        	id="prev_33bed8d4fcadf2a946f6d616846427ed" 
+                            class="btn btn-mini" 
+                            title="preview"><i class="icon-eye-open"></i></button>
+                        <button 
+                        	id="cart_33bed8d4fcadf2a946f6d616846427ed" 
+                            class="btn btn-mini" 
+                            title="add to cart"><i class="icon-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            	<div class="span4 feature rounded">
+                	<div class="placeholder">
+                    	<ul class="nav">
+                        	<li><img src="assets/img/products/e4006267596b5333ddca9d2702e3d7c2.jpg"></li>
+                            <li>
+                            	<span>
+                                	<h4>$20</h4>
+                                    <p>Aenean adipiscing mi accumsan quam ullamcorper non lobortis diam tempor.</p>
+                            	</span>
+                            </li>
+                        </ul>
+                        <p class="hidden-phone">
+                        	<span class="label">school</span>
+                            <span class="label">raise funds</span>
+                            <span class="label">fractals</span>
+                            <span class="label">t-shirt</span>
+                            <span class="label">joiner</span>
+                            <span class="label">hurdd.it</span>
+                            <span class="label">starving student</span>
+                            <span class="label">noobies</span>
+                        </p>
+                        <div class="nav-list">
+                        	<ul class="nav">
+                            	<li><a href="#"><img src="assets/img/icons/facebook-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/twitter-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/pintrest-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/tumblr-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/google_plus-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/email-16x16.png"></a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                        <button 
+                        	id="prev_e4006267596b5333ddca9d2702e3d7c2" 
+                            class="btn btn-mini" 
+                            title="preview"><i class="icon-eye-open"></i></button>
+                        <button 
+                        	id="cart_e4006267596b5333ddca9d2702e3d7c2" 
+                            class="btn btn-mini" 
+                            title="add to cart"><i class="icon-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            	<div class="span4 feature rounded">
+                	<div class="placeholder">
+                    	<ul class="nav">
+                        	<li><img src="assets/img/products/dc80286e2508388d5519c6baecf0b09e.jpg"></li>
+                            <li>
+                            	<span>
+                                	<h4>$20</h4>
+                                    <p>Aenean adipiscing mi accumsan quam ullamcorper non lobortis diam tempor.</p>
+                            	</span>
+                            </li>
+                        </ul>
+                        <p class="hidden-phone">
+                        	<span class="label">school</span>
+                            <span class="label">raise funds</span>
+                            <span class="label">fractals</span>
+                            <span class="label">t-shirt</span>
+                            <span class="label">joiner</span>
+                            <span class="label">hurdd.it</span>
+                            <span class="label">starving student</span>
+                            <span class="label">noobies</span>
+                        </p>
+                        <div class="nav-list">
+                        	<ul class="nav">
+                            	<li><a href="#"><img src="assets/img/icons/facebook-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/twitter-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/pintrest-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/tumblr-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/google_plus-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/email-16x16.png"></a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                        <button 
+                        	id="prev_dc80286e2508388d5519c6baecf0b09e" 
+                            class="btn btn-mini" 
+                            title="preview"><i class="icon-eye-open"></i></button>
+                        <button 
+                        	id="cart_dc80286e2508388d5519c6baecf0b09e" 
+                            class="btn btn-mini" 
+                            title="add to cart"><i class="icon-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            	<div class="span4 feature rounded">
+                	<div class="placeholder">
+                    	<ul class="nav">
+                        	<li><img src="assets/img/products/2816605585ea6cfd4e1ebd215c7148c7.jpg"></li>
+                            <li>
+                            	<span>
+                                	<h4>$20</h4>
+                                    <p>Aenean adipiscing mi accumsan quam ullamcorper non lobortis diam tempor.</p>
+                            	</span>
+                            </li>
+                        </ul>
+                        <p class="hidden-phone">
+                        	<span class="label">school</span>
+                            <span class="label">raise funds</span>
+                            <span class="label">fractals</span>
+                            <span class="label">t-shirt</span>
+                            <span class="label">joiner</span>
+                            <span class="label">hurdd.it</span>
+                            <span class="label">starving student</span>
+                            <span class="label">noobies</span>
+                        </p>
+                        <div class="nav-list">
+                        	<ul class="nav">
+                            	<li><a href="#"><img src="assets/img/icons/facebook-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/twitter-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/pintrest-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/tumblr-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/google_plus-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/email-16x16.png"></a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                        <button 
+                        	id="prev_2816605585ea6cfd4e1ebd215c7148c7" 
+                            class="btn btn-mini"
+                            title="preview"><i class="icon-eye-open"></i></button>
+                        <button 
+                        	id="cart_2816605585ea6cfd4e1ebd215c7148c7" 
+                            class="btn btn-mini" 
+                            title="add to cart"><i class="icon-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            	<div class="span4 feature rounded">
+                	<div class="placeholder">
+                    	<ul class="nav">
+                        	<li><img src="assets/img/products/9d0de64f27b14362982ac2b8c1dd447f.jpg"></li>
+                            <li>
+                            	<span>
+                                	<h4>$20</h4>
+                                    <p>Aenean adipiscing mi accumsan quam ullamcorper non lobortis diam tempor.</p>
+                            	</span>
+                            </li>
+                        </ul>
+                        <p class="hidden-phone">
+                        	<span class="label">school</span>
+                            <span class="label">raise funds</span>
+                            <span class="label">fractals</span>
+                            <span class="label">t-shirt</span>
+                            <span class="label">joiner</span>
+                            <span class="label">hurdd.it</span>
+                            <span class="label">starving student</span>
+                            <span class="label">noobies</span>
+                        </p>
+                        <div class="nav-list">
+                        	<ul class="nav">
+                            	<li><a href="#"><img src="assets/img/icons/facebook-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/twitter-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/pintrest-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/tumblr-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/google_plus-16x16.png"></a></li>
+                                <li><a href="#"><img src="assets/img/icons/email-16x16.png"></a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                        <button 
+                        	id="prev_9d0de64f27b14362982ac2b8c1dd447f" 
+                            class="btn btn-mini" 
+                            title="preview"><i class="icon-eye-open"></i></button>
+                        <button 
+                        	id="cart_9d0de64f27b14362982ac2b8c1dd447f" 
+                            class="btn btn-mini" 
+                            title="add to cart"><i class="icon-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+	  <hr>
+
+    </div> <!-- /container -->
+    
+    <div class="footer navbar-inverse">
+    	<div class="navbar-inner">
+            <div class="container">
+                <ul class="nav base-nav hidden-phone">
+                    <li><a href="#">About</a></li>
+                    <li><span> </span></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><span> </span></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><span> </span></li>
+                    <li><a href="calculator.html">Hurdd.it Calculator</a></li>
+                    <li><span> </span></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><span> </span></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+                <p id="copyright" class="nav pull-right">all rights reserved © hurdd.it 2012</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/jquery.serializeObject.js"></script>
+    <script>
+		$(window).ready(function(event){
+			window.scrollTo(0,0); // reset in case prev not scrolled  
+			var nPageH = $(document).height();
+			var nViewH = window.outerHeight;
+			if (nViewH > nPageH){
+				nViewH -= 250;
+				$("body").css('height',nViewH + 'px');
+			}
+			window.scrollTo(0,1);
+		});
+		
+		$(document).ready(function(){
+			setTimeout(function () {
+				window.scrollTo(0, 1);
+			}, 100);
+			/* button event manager */
+			$('button').live('click',function(event){
+				event.preventDefault();
+				var id = $(this).attr('id');
+				if(id == 'sign_in'){
+					alert('user login request button');
+				}else if(id == 'get_started'){
+					alert('user get started button');
+				}else{
+					alert('Add\n product_id: '+ id);
+				}
+				return false;
+			});
+		});
+	</script>
+
+</body></html>
