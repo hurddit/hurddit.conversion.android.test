@@ -103,6 +103,7 @@
                 </ul>
               </li>
               <li class="divider-vertical"></li>
+              <li><a href="calculator.html">Calculator</a></li>
               <li><a href="#faq">FAQ</a></li>
               <li class="divider-vertical"></li>
               <li class="dropdown" style="display:none;">
@@ -114,9 +115,9 @@
                 </ul>
               </li>
             </ul>
-            <form id="login" class="navbar-form pull-right">
-              <button id="sign_in" class="btn btn-mini">Sign in <i class="icon-user"></i></button>
-            </form>
+            <div class="navbar-form pull-right">
+              <button id="sign_in" class="btn btn-mini">Sign in/Register <i class="icon-user"></i></button>
+            </div>
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -447,12 +448,47 @@
         </div>
     </div>
 
+	<!--/ all the modal boxes /-->
+    <div id="login_action" class="modal hide fade" style="display: none;">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>&nbsp;</h3>
+        </div>
+    	<div class="modal-body container-fluid">
+        	<form name="sign_in" class="form-inline">
+            	<legend>Sign In - Register</legend>
+                <div class="input-prepend">
+                	<label class="span2">Email: </label>
+                    <span class="add-on">@</span><input type="email" class="span3" placeholder="email address">
+                </div>
+                <hr>
+                <div class="input-prepend">
+                	<label class="span2">Password: </label>
+                    <span class="add-on">!</span><input type="email" class="span3">
+                </div>
+                <hr>
+                <div class="checkbox">
+                	<span class="span2"></span>
+                	<label class="span3">Remember Me<input type="checkbox" id="remember_user"></label>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+        	<a id="go" href="javascript:void(0);" class="btn btn-mini primary">sign in</a>
+            <a id="close" href="javascript:void(0);" class="btn btn-mini warning" data-dismiss="modal">cancel</a>
+        </div>
+    </div>
+    <!-- // -->
+
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://raw.github.com/makeusabrew/bootbox/v2.4.1/bootbox.min.js"></script>
+    <script src="assets/js/plugins/jquery.standalone.js"></script>
+    <script src="assets/js/plugins/jquery.mobile.js"></script>
     <script src="assets/js/plugins/jquery.serializeObject.js"></script>
     <script>
 		$(window).ready(function(event){
@@ -467,22 +503,37 @@
 		});
 		
 		$(document).ready(function(){
+			/* mobile tests and corrections */
+			if(!$.browser.mobile){
+				$("#sign_in").attr('data-toggle','modal');
+			}
+			/* mobile location bar adjustment */
 			setTimeout(function () {
 				window.scrollTo(0, 1);
 			}, 100);
-			/* button event manager */
-			$('button').live('click',function(event){
-				event.preventDefault();
-				var id = $(this).attr('id');
-				if(id == 'sign_in'){
-					alert('user login request button');
-				}else if(id == 'get_started'){
-					alert('user get started button');
-				}else{
-					alert('Add\n product_id: '+ id);
-				}
-				return false;
+
+			/* sign in modal bootbox */
+			$("#login_action").bind("show",function(){				
+				var modal = $(this);
+				modal.css('margin-top', (modal.outerHeight() / 2) * -1)
+					 .css('margin-left', (modal.outerWidth() / 2) * -1);
+				return this;
+				$("#login_action a.btn").click(function(e){
+					var id = $(this).attr('id');
+				});
+			}).bind("hide",function(){
+				$("#login_action a.btn").unbind();
 			});
+			$("#sign_in").bind("click",function(){
+				if($(this).attr('data-toggle')){
+					$("#login_action").modal({
+						"show" : true
+					});
+				}else{
+					window.location.href = 'signin.html';
+				}
+			});
+			/**/
 		});
 	</script>
 

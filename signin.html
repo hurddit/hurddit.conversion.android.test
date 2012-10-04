@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <title>--| hurdd.it |--</title>
@@ -23,6 +23,7 @@
 	.background {
 		background: url(assets/img/pat_01.png);
 	}
+	.actions p { font-size: 90%; }
 	.feature { 
 		background: #E6E6E6; 
 		min-height: 270px !important;
@@ -34,6 +35,8 @@
 	.placeholder img {
 		float: left;
 		margin: 0 8px 0 0;
+		max-width: 175px;
+		max-height: 175px;
 	}
 /*	.placeholder span {
 		margin: 0 0.9em;
@@ -69,10 +72,10 @@
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/css/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/css/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/css/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/css/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
   </head>
 
   <body>
@@ -85,7 +88,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#home"><img src="assets/img/branding/logo.png" alt="hurdd.it"></a>
+          <a class="brand" href="index.html"><img src="assets/img/branding/logo.png" alt="hurdd.it"></a>
           <div class="nav-collapse collapse" style="padding-top:6px;">
             <ul class="nav">
               <li class="dropdown">
@@ -100,6 +103,7 @@
                 </ul>
               </li>
               <li class="divider-vertical"></li>
+              <li><a href="calculator.html">Calculator</a></li>
               <li><a href="#faq">FAQ</a></li>
               <li class="divider-vertical"></li>
               <li class="dropdown" style="display:none;">
@@ -111,18 +115,51 @@
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form pull-right">
-              <!--input class="span2" placeholder="Email" type="email">
-              <input class="span2" placeholder="Password" type="password" -->
-              <button id="sign_in" class="btn btn-mini">Sign in</button>
-            </form>
+            <div class="navbar-form pull-right">
+              <button id="sign_in" class="btn btn-mini">Sign in/Register <i class="icon-user"></i></button>
+            </div>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
     <div class="container background">
-    --// insert calculator here \\--
+    	<form name="signin_form">
+        	<div class="row row-fluid">
+            	<div class="span6"><!-- login -->
+                    &nbsp;<a href="index.html" class="btn btn-mini"><i class="icon-chevron-left"></i> Back</a>
+                    <legend>Sign In / Register</legend>
+                    <div id="sign_in" class="control-group">
+                    	<label class="control-label" for="email">Email: </label>
+                        <div class="controls">
+                        	<div class="input-append">
+                        	<input type="email" name="email" id="email" placeholder="email"><span class="add-on">@</span>                     		</div>
+                        </div>
+                       	<label class="control-label">Password: </label>
+                        <div class="controls">
+                        	<div class="input-append">
+                        	<input type="password" name="password" id="password"><span class="add-on">*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="register_form" class="control-group" style="display: none;">
+                    	<label class="control-label"></label>
+                        <div class="controls">
+                        	<input type="text" name="firstname" id="firstname" placeholder="first name">
+                        </div>
+                        <div class="controls">
+                        	<input type="text" name="lastname" id="lastname" placeholder="last name">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                    	<div class="controls pull-right">
+                        	<button id="sign_in" class="btn btn-mini">Sign-in</button>
+                            <button id="register" class="btn btn-mini">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div> <!-- /container -->
     
     <div class="footer navbar-inverse">
@@ -137,7 +174,7 @@
                     <li><span> </span></li>
                     <li><a href="#">Contact</a></li>
                     <li><span> </span></li>
-                    <li><a href="#">Hurdd.it Calculator</a></li>
+                    <li><a href="calculator.html">Hurdd.it Calculator</a></li>
                     <li><span> </span></li>
                     <li><a href="#">Terms of Service</a></li>
                     <li><span> </span></li>
@@ -156,6 +193,41 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/plugins/jquery.standalone.js"></script>
     <script src="assets/js/plugins/jquery.mobile.js"></script>
-    <script src="assets/js/plugins/jquery.serializeObject.js"></script>  
+    <script src="assets/js/plugins/jquery.serializeObject.js"></script>
+    <script>
+		$(window).ready(function(event){
+			window.scrollTo(0,0); // reset in case prev not scrolled  
+			var nPageH = $(document).height();
+			var nViewH = window.outerHeight;
+			if (nViewH > nPageH){
+				nViewH -= 250;
+				$("body").css('height',nViewH + 'px');
+			}
+			window.scrollTo(0,1);
+		});
+		
+		$(document).ready(function(){
+			/* mobile location bar adjustment */
+			setTimeout(function () {
+				window.scrollTo(0, 1);
+			}, 100);
+			/* deal with the form buttons */
+			$('.btn').live('click',function(e){
+				e.preventDefault();
+				var id = $(this).attr('id');
+				switch(id){
+					case 'register':
+						$("#register_form").show();
+						$(this).hide();
+						$("#sign_in").text('register');
+					break;
+					case 'sign_in':
+						var html = $(this).html();
+						alert('user action: ' + html);
+					break;
+				}
+			});
+		});
+	</script>
 
 </body></html>
